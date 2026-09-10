@@ -1,0 +1,9 @@
+import calculator:
+a=float(input("عدد اول را وارد کنید:"))
+b=float(input("عدد دوم را وارد کنید:"))
+
+
+print("جمع:",calculator.add(a,b))
+print("تفریق:",calculator.sub(a,b))
+print("ضرب:",calculator.mult(a,b))
+print("تقسیم:",calculator.div(a,b))
