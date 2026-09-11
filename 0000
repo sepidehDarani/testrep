@@ -1,0 +1,9 @@
+file=open("student.txt","w")
+n=int(input("تعداد دانشجوهارو را وارد کنید:"))
+for i in range(n):
+    name=input("نام دانشجو:")
+    code=input("کد دانشجویی:")
+    age=input("سن دانشجو:")
+
+    file.write(name,code,age,"\n")
+    file.close()

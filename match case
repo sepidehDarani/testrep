@@ -1,0 +1,15 @@
+
+a = float (input("عدد اول را وارد کنید"))
+b = float (input("عدد دوم را وارد کنید"))
+op = input("عملگر را بنویسید : ")
+match op:
+    case "+":
+       print(a+b)
+    case "_":
+       print(a_b)
+    case "/":
+       print(a/b) 
+    case "*":
+       print(a*b)
+    case _:
+       print("plz enter op again")

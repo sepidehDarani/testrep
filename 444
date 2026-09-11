@@ -1,0 +1,13 @@
+file=open("text.txt" ,"w")
+file.write("سلام")
+file.close()
+file=open("test.txt","r")
+print (file.read())
+file.close()
+file=open("test.txt","a")
+file.write("\nشایان")
+file.close()
+file=open("text.txt","r")
+for line in file:
+     print (line)
+     file.close()

@@ -1,4 +1,4 @@
-import calculator:
+import calculator
 a=float(input("عدد اول را وارد کنید:"))
 b=float(input("عدد دوم را وارد کنید:"))
 

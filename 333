@@ -1,0 +1,16 @@
+def num_check(a):
+    match a:
+        case 0:
+          return "عدد صفر است" 
+        case 1:
+          return "عدد است"
+        case a if a>0:
+          return "عدد مثبت است"
+        case a if a<0:
+          return "عدد منفی است"
+        case _:
+          return "نامشخص"
+
+a= int(input(""))
+res=num_check(a)
+print (res)
