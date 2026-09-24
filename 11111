@@ -1,0 +1,29 @@
+import calucator
+num1=float(input("عدد اول را وارد کنید :"))
+num2=float(input("عدد دوم را وارد کنید :"))
+amaliat=input("+ _ * / : ")
+
+if amaliat == "+":
+    print= calucator.sum_n(num1,num2)
+    with open("test.txt","a") as file :
+        file.write(f"{num1} {amaliat} {num2} = {print}")
+elif amaliat== "_":
+    print=calucator.sub_n(num1,num2)
+    whit open("test.txt","a") as file :
+         
+elif amaliat=="*":
+    print=num1*num2
+elif amaliat== "/":
+    print=num1/num2
+
+print("sum,".calucator.add(num1.num2))
+print("sub,".calucator.sub(num1,num2))
+print("mult,".calucator.mult(num1,num2))
+print("div,".calucator.div(num1.num2))
+
+file=open("result.txt" ,"w")
+file.write("sum:".calucator.add(num1,num2),("\n"))
+file.write("sub:".calucator.sub(num1,num2),("\n"))
+file.write("mult:".calucator.mult(num1.num2),("\n"))
+file.write("div:".calucator.div(num1.num2),("\n"))
+file.close()

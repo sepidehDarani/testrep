@@ -1,0 +1,73 @@
+while true:
+    print("\n--- student menu---")
+    print("1.Add student")
+    print("2.search student")
+    print("3.display student")
+    print("4.delete student")
+    print("5.edit student")
+    print("6.exit")
+
+    choice=input("enter your choice:")
+    #Add student
+    if choice == "1":
+     name=input("enter student name:")
+    whit open("student.txt","a")as file:file write(name+"\n")
+    print("student add")
+
+    #search student 
+    elif choice =="2:"
+    name=input("Enter name to search:")
+    whit open("student.txt","r")as file:student = file.readlines()
+     found=False
+    for student in students:
+       if student.strip()==
+       name:
+       print("student found:",name)
+       found:True
+       if found ==false:
+          print("student not found.")
+
+    #display student    
+    elif choice =="3":
+    whit open("student.txt","r")ad file:
+    students=file.readlines()
+    print("\n---student---")
+    for student in students:
+       print(student.strip())
+
+    #delete student
+    elif choice=="4":
+name=input("enter name to delete:")
+whit open("student.txt","r")as file:
+students=
+file.readlines()
+whit open("student.txt","w")as file:
+for student in students:
+   if student.strip()
+   name:
+   file.write(student)
+   print("student deleted.")
+
+#edit student
+elif choice=="5":
+old_name=input("enter old name:")
+new_name=input("enter new name:")
+whit open("student.txt","r")as file:
+students=
+file.readlines()
+whit open("student.txt","w")as file:
+for student in students:
+   if student.strip()==
+   old_name:
+   file.write(new_name +"\n")
+else:
+   file.write(student)
+print("student edited.")
+
+#exit
+elif choice=="6":
+print("bye!")
+break
+
+else:
+print("invalid choice.")
