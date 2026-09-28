@@ -1,0 +1,90 @@
+class studentmanager:
+    def __init__ (self):
+       self.filename="student.txt"
+       #Add student
+    def add_student(self):
+           name=input("enter student name:")
+           with open(self.filename,"a") as file:
+               file.write(name+"\n")
+               print("student added successfuly.")
+
+        #search student
+    def search_student(self):
+           name=input("enter name to search:")
+           with open(self.filename,"r")as file:
+               student=
+               file.readlines()
+               found=False
+
+               for student in students:
+                   if student.strip()==
+                   name:
+                   print("student found:", name)
+                   found=True
+                   if found == false:
+                       print("student not found.")
+
+        #display student
+    def display_student(self):
+           with open(self.filename,"r")as file:
+               student=
+               file.readline()
+               print("\n---students---")
+               for nstudent in students:
+                   print(student.strip())
+
+        #delete student
+    def delete_student(self):
+           name=input("enter name to delete:")
+           with open(self.filename,"r")as file:
+               student=file.readline()
+               with open(self.filename,"w")as file:
+                   for student in students:
+                       if student.strip()!=name:
+                           file.write(student)
+                           print("student delete")
+
+        #edit student
+    def edit_student(self):
+           old_name=input("enter old name:")
+           new_name=input("enter new name:")
+           with open(self.filename,"r")as file:
+               student=file.readline()
+               with open(self.filename,"w")as file:
+                   for student in students:
+                       if student.strip()==
+                       old_name:
+                       file.write(new_name+"\n")
+                   else:
+                       file.write(student)
+                       print("student edited successfully.")
+
+student_manager = studentmanager()
+
+while true:
+    print("\n--- student menu---")
+    print("1.Add student")
+    print("2.search student")
+    print("3.display student")
+    print("4.delete student")
+    print("5.edit student")
+    print("6.exit")
+
+choice=input("enter your choice:")
+if choice=="1":
+    student_manager.add_student()
+elif choice=="2":
+    student_manager.search_student()
+elif choice=="3":
+    student_manager.display_student()
+elif choice=="4":
+    student_manager.delete.student()
+elif choice=="5":
+    student_manager.edit.student()
+elif choice=="6":
+    print("goodbye!")
+    break
+
+else:
+    print("invalid choice.")
+
