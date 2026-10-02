@@ -1,0 +1,15 @@
+def login_req(func):
+    def wrapper():
+        is_admin=False
+        if is_admin:
+            func()
+        else:
+            print("شما دسترسی ندارید")
+    return wrapper
+
+@login_req
+def dashboard():
+    print("داشبورد")
+
+
+dashboard()

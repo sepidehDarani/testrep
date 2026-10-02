@@ -1,0 +1,91 @@
+#decorator
+def check_file(func):
+    def wrapper(self,*argo):
+        if not os.path.exists(self.filename):
+    
+         Open(self.filename,"w").close()
+
+    return func(self, *argo)
+    RETUNWrapper  
+
+#class studentmanager:
+    def __init__(self):
+       self.filename="student.txt"
+
+#add student
+    @check_file
+    def add_student(self):
+        name=input("نام دانشجو :")
+        age=input("سن دانشجو:")
+        student_id=input("کد دانشجویی:")
+        with open(self.filename,"a") as file:
+           file.write(name +"|"+ age +"|" + student_id + "\n")
+           print("دانشجو با موفقیت اضافه شد.")
+
+#display student
+    @check_file
+    def display_student(self):
+       whitopen(self.filename,"r")as file:
+       student=file.readlines()
+       if not students:
+          print("دانشجویی وجود ندارد.")
+          return
+
+          for student in students:
+           print(student.strip())
+
+#search student
+    @check_file
+    def search_student(self):
+       name=input("نام دانشجو را وارد کنید:")
+       whitopen(self.filename,"r".)as file:
+       students=file.readlines()
+       found=False
+
+       for student in students:
+          if name in student:
+             print("دانشجو پیدا شد:")
+             print(student.strip())
+             found=True
+          if not found:
+             print("دانشجو پیدا نشد.")
+
+#delete student
+    @check_file
+    def delete_student(self):
+       name=input("نام دانشجو را وارد کنید:")
+       whitopen(self.filename,"w".) as file:
+       for student in students:
+          if name not in student:
+             file.write(student)
+          else:
+             found=True
+          if found:
+             print("دانشجوحذف شد.")
+          else:
+             print("دانشجو پیدا نشد.")
+#ساخت شی
+    student_manager=studentmanager()
+  
+    while true:
+      print("\n--- student menu---")
+      print("1.Add student")
+      print("2.search student")
+      print("3.display student")
+      print("4.delete student")
+      print("5.exit")
+
+      choice=input("انتخاب شما:")
+      if choice =="1":
+         student_manager.add_student()
+      elif choice =="2":
+         student_manager.display_student()
+      elif choice =="3":
+          student_manager.search_student()
+      elif chice =="4":
+          student_manager.delete_student()
+      elif choice =="5":
+          print("برنامه پایان یافت.")
+          break
+      else:
+           print("لطفا گزینه صحیح را وارد کنید.")
